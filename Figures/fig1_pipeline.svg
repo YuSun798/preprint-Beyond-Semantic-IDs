@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="540" viewBox="0 0 1200 540">
+  <defs>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#e69f00"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#0072b2"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#009e73"/>
+    </marker>
+    <style>
+      .title { font: 700 34px Georgia, serif; }
+      .boxtext { font: 28px Georgia, serif; fill: #333; }
+      .small { font: italic 20px Georgia, serif; fill: #777; }
+      .metricO { font: 700 25px Georgia, serif; fill: #d55e00; }
+      .metricG { font: 700 23px Georgia, serif; fill: #009e73; }
+      .graybox { fill: #f8f8f8; stroke: #bdbdbd; stroke-width: 3; }
+      .orangebox { fill: #fff4cf; stroke: #e69f00; stroke-width: 3; }
+      .redbox { fill: #fff0ea; stroke: #d55e00; stroke-width: 4; }
+      .bluebox { fill: #dff1fb; stroke: #0072b2; stroke-width: 3; }
+      .greenbox { fill: #dff4ea; stroke: #009e73; stroke-width: 4; }
+      .arrowO { stroke: #e69f00; stroke-width: 4; fill: none; marker-end: url(#arrow-orange); }
+      .arrowB { stroke: #0072b2; stroke-width: 4; fill: none; marker-end: url(#arrow-blue); }
+      .arrowG { stroke: #009e73; stroke-width: 4; fill: none; marker-end: url(#arrow-green); }
+      .dash { stroke: #d9d9d9; stroke-width: 3; stroke-dasharray: 8 8; }
+    </style>
+  </defs>
+
+  <text x="220" y="54" text-anchor="middle" class="title" fill="#e69f00">SID / TIGER-style</text>
+  <text x="900" y="54" text-anchor="middle" class="title" fill="#0072b2">CQG-Single / CQG-AR</text>
+  <line x1="600" y1="65" x2="600" y2="510" class="dash"/>
+
+  <rect x="60" y="95" width="180" height="43" rx="7" class="graybox"/>
+  <text x="150" y="125" text-anchor="middle" class="boxtext">Item Catalog</text>
+  <rect x="290" y="95" width="190" height="43" rx="7" class="graybox"/>
+  <text x="385" y="125" text-anchor="middle" class="boxtext" style="font-size:22px">Chronological History</text>
+
+  <path d="M150 138 L150 185" class="arrowO"/>
+  <path d="M385 138 L385 185" class="arrowO"/>
+  <rect x="55" y="185" width="230" height="70" rx="8" class="orangebox"/>
+  <text x="170" y="216" text-anchor="middle" class="boxtext">SID Tokenizer</text>
+  <text x="170" y="244" text-anchor="middle" class="small">RQ-VAE / H-KMeans</text>
+  <rect x="315" y="185" width="205" height="70" rx="8" class="orangebox"/>
+  <text x="417.5" y="216" text-anchor="middle" class="boxtext">Autoregressive</text>
+  <text x="417.5" y="244" text-anchor="middle" class="small">SID decoder</text>
+
+  <path d="M170 255 L262 318" class="arrowO"/>
+  <path d="M417.5 255 L330 318" class="arrowO"/>
+  <rect x="145" y="318" width="280" height="72" rx="8" class="redbox"/>
+  <text x="285" y="350" text-anchor="middle" class="boxtext" font-weight="700" style="font-size:23px">Valid-Prefix Beam Search</text>
+  <text x="285" y="379" text-anchor="middle" class="metricO" style="font-size:18px">TargetInOutput@100: 66.7%</text>
+  <path d="M285 390 L285 445" class="arrowO" stroke-dasharray="8 6"/>
+  <rect x="165" y="445" width="240" height="45" rx="7" class="orangebox"/>
+  <text x="285" y="475" text-anchor="middle" class="boxtext">Retrieved Items</text>
+  <text x="285" y="500" text-anchor="middle" class="small">prefix-limited support</text>
+
+  <rect x="690" y="95" width="190" height="43" rx="7" class="graybox"/>
+  <text x="785" y="125" text-anchor="middle" class="boxtext">Item Catalog</text>
+  <rect x="925" y="95" width="190" height="43" rx="7" class="graybox"/>
+  <text x="1020" y="125" text-anchor="middle" class="boxtext" style="font-size:22px">Chronological History</text>
+  <path d="M785 138 L785 185" class="arrowB"/>
+  <path d="M1020 138 L1020 185" class="arrowB"/>
+
+  <rect x="675" y="185" width="250" height="70" rx="8" class="bluebox"/>
+  <text x="800" y="216" text-anchor="middle" class="boxtext">Frozen Item</text>
+  <text x="800" y="244" text-anchor="middle" class="small">continuous vectors</text>
+  <rect x="950" y="185" width="200" height="70" rx="8" class="bluebox"/>
+  <text x="1050" y="216" text-anchor="middle" class="boxtext">Query</text>
+  <text x="1050" y="244" text-anchor="middle" class="small">decoder-only model</text>
+
+  <path d="M800 255 L880 318" class="arrowB"/>
+  <path d="M1050 255 L970 318" class="arrowB"/>
+  <rect x="735" y="318" width="370" height="72" rx="8" class="greenbox"/>
+  <text x="920" y="350" text-anchor="middle" class="boxtext" font-weight="700">Dense Scoring / ANN</text>
+  <text x="920" y="379" text-anchor="middle" class="metricG">all encoded items scoreable</text>
+  <path d="M920 390 L920 445" class="arrowG"/>
+  <rect x="785" y="442" width="270" height="52" rx="7" class="greenbox"/>
+  <text x="920" y="470" text-anchor="middle" class="boxtext">Retrieved Items</text>
+  <text x="920" y="503" text-anchor="middle" class="small">full index candidate set</text>
+</svg>
