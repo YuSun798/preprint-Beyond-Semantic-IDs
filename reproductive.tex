@@ -12,7 +12,11 @@
 
 \ifreproStandalone
 \documentclass[letterpaper]{article}
-\usepackage[submission]{aaai2027}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
 \setlength{\pdfpagewidth}{8.5in}
 \setlength{\pdfpageheight}{11in}
 \frenchspacing
@@ -24,7 +28,7 @@
 \def\@listii{\leftmargin\leftmarginii \labelwidth\leftmarginii \advance\labelwidth-\labelsep \topsep .4em \parsep .4em \itemsep .4em}
 \def\@listiii{\leftmargin\leftmarginiii \labelwidth\leftmarginiii \advance\labelwidth-\labelsep \topsep .4em \parsep .4em \itemsep .4em}\makeatother
 
-\setcounter{secnumdepth}{0}
+\setcounter{secnumdepth}{3}
 \renewcommand\thesubsection{\arabic{subsection}}
 \renewcommand\labelenumi{\thesubsection.\arabic{enumi}}
 
