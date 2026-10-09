@@ -172,6 +172,9 @@ generation requires discrete identifier tokens: CQG-Single removes both the
 token vocabulary and serial decoding, whereas CQG-AR preserves serial
 generation but replaces tokens with continuous residual updates.
 
+\paragraph{Adjacent efficient and multimodal model applications.}
+Resource-efficient language modeling and multimodal adaptation have been investigated in related application settings. Energy-efficient retrieval-augmented generation with small language models addresses on-device constraints~\citep{cheng2026toward}. In short-video governance, in-prompt process supervision~\citep{liu-etal-2026-ips} and reasoning-enhanced domain-adaptive multimodal pretraining~\citep{wang-etal-2025-reasoning-enhanced} study different supervision and adaptation strategies. Audio-enhanced vision--language modeling with latent-space broadening explores multimodal representation and data expansion~\citep{10.1145/3711896.3737195}. These studies provide broader context, but do not establish results on finite-beam Semantic-ID reachability or the continuous-query recommendation methods analyzed here.
+
 \textbf{Sequential, dense, and hybrid retrieval.}
 GRU4Rec, SASRec, and BERT4Rec score catalog items from interaction histories
 \citep{hidasi2016gru4rec,kang2018sasrec,sun2019bert4rec}; dual encoders are
