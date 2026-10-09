@@ -191,7 +191,7 @@ item encoder or an additional reranker.
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.9\textwidth]{Figures/whiteboard_exported_image (5).pdf}
+\includegraphics[width=0.9\textwidth]{Figures/architecture_overview.pdf}
 \caption{Training and inference pipelines for SID retrieval, CQG-Single, and CQG-AR. SID-based GR is trained to predict clustered code sequences, whereas CQG
 generates continuous queries in item-embedding space.
 SID retrieval autoregressively generates discrete code tokens and explores
@@ -395,8 +395,7 @@ TIGER & 66.7\% & 25.8\% & 45.2\% & 54.0\% & 68.6\% & 78.1\% \\
 CQG-Single & \textbf{67.3\%} & \textbf{26.4\%} & \textbf{46.9\%} & \textbf{56.3\%} & \textbf{70.0\%} & \textbf{78.9\%} \\
 CQG-AR & 66.4\% & 24.4\% & 45.4\% & 54.8\% & 69.6\% & 78.8\% \\
 \bottomrule
-\end{tabular}%
-}
+\end{tabular}
 \caption{ML-1M finite-output support (seed 42). Overall is user weighted;
 Q1--Q4 average distinct target items within training-frequency quartiles, and
 the final column is the fraction of distinct targets retrieved at least once
