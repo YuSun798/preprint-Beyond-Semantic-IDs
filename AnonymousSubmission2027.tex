@@ -27,7 +27,7 @@
 
 \title{Beyond Semantic IDs: Finite-Beam Reachability and Continuous-Query
 Generation in Generative Recommendation}
-\author{}
+\author{Yu Sun\thanks{Corresponding author} \and Renkai Xiang \and Zuodong Xiang \and Junwei Zhou \\ Yike Zhang \and Jianxin Zhang \and Zhihao Zhu \and Xiaoyu Cao \and Hailu Xu}
 \date{}
 
 \begin{document}
@@ -378,7 +378,7 @@ intervals appear in Appendix C.1.}
 \label{fig:crossover}
 \end{figure*}
 
-\begin{table*}[!t]
+\begin{table}[!t]
 \centering
 \small
 \setlength{\tabcolsep}{4pt}
@@ -395,14 +395,15 @@ TIGER & 66.7\% & 25.8\% & 45.2\% & 54.0\% & 68.6\% & 78.1\% \\
 CQG-Single & \textbf{67.3\%} & \textbf{26.4\%} & \textbf{46.9\%} & \textbf{56.3\%} & \textbf{70.0\%} & \textbf{78.9\%} \\
 CQG-AR & 66.4\% & 24.4\% & 45.4\% & 54.8\% & 69.6\% & 78.8\% \\
 \bottomrule
-\end{tabular}
+\end{tabular}%
+}
 \caption{ML-1M finite-output support (seed 42). Overall is user weighted;
 Q1--Q4 average distinct target items within training-frequency quartiles, and
 the final column is the fraction of distinct targets retrieved at least once
 by Top-200. Returned-list sizes and filtering are matched across methods.
 Bold denotes the best value in each column.}
 \label{tab:target-support-comparison}
-\end{table*}
+\end{table}
 
 
 
